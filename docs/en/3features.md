@@ -28,7 +28,7 @@ To disconnect a device, click on the large button saying ```CONNECTED``` or clos
 ![](img/disconnect.png)
 
 ### Firmware version
-Futhermore, the firmware version can be read out using the corresponding button to check, whether your device is tested and compatible with the current version of EasyLoader. Using other/older firmware version may also work but correct functionality is not guaranteed. If any major problem occur, try using an older version of VSE EasyLoader (:material-arrow-right-bold: contact sales or download from [:material-link: vse-flow.com](https://www.vse-flow.com/en/downloads.html)).
+Futhermore, the firmware version can be read out using the corresponding button to check, whether your device is tested and compatible with the current version of EasyLoader. Using other/older firmware version may also work but correct functionality is not guaranteed. If any major problem occur, try using an older version of VSE EasyLoader (:material-arrow-right-bold: contact sales or download from [:material-link: vse-flow.com](https://www.vse-flow.com/en/software.html)).
 
 The current software versions of the devices are listed in the following table:
 
@@ -234,7 +234,7 @@ $\frac{\textrm{in}^3}{\textrm{min}}$ :material-arrow-right-bold: Cubic inch per 
 
 The **Selected flowmeters** card shows information about the technical specification of the selected flowmeters like the nominal K-Factor and maximum (nominal) flowrate. Also the selected values for IPF and channel count are added. Changes of the custom fullscale flowrate are not shown in the card.
 
-### Configuration file import/export
+### Configuration file import/export {id="configuration-file-importexport"}
 ![](img/e_importexport.png)
 
 Using the ```IMPORT``` and ```EXPORT``` buttons in the top row of the **Easy configuration** tab you can save and restore so called ```*.easyConf``` presets. They contain all selected/configured values of the **Easy configurator**, but ***NOT*** settings that are currently saved on the device. You can use this filetype for most use cases.
@@ -329,7 +329,7 @@ If the device does not behave like expected, you can try to do a factory reset. 
 
 ![](img/factoryreset.png)
 
-## XML Up- & Download
+## XML Up- & Download {id="xml-up---download"}
 
 ![](img/page_updownload.png)
 
@@ -346,4 +346,4 @@ An upload can be started by choosing a compatible ```*.xml``` file that matches 
 ## Footnotes
 
 [^1]: Source:  [:material-link: convert-measurement-units.com](https://www.convert-measurement-units.com/conversion-calculator.php?type=volumenstrom)
-[^2]: Source:  [:material-link: vse-flow.com/downloads/software](https://www.vse-flow.com/en/downloads.html?scrollTo=software)
+[^2]: Source:  [:material-link: vse-flow.com/downloads/software](https://www.vse-flow.com/en/software.html)

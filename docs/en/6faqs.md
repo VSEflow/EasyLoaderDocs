@@ -170,4 +170,4 @@ We collected some common questions that we often get asked to create this FAQ se
     
     If you think your idea is also valuable for other users, feel free to send us a feature request ([:material-link: contact persons](https://www.vse-flow.com/en/contact-persons.html)).
     
-    Alternatively you can also try using the OS 10.0 software for this purpose. It is a legacy software that also features a register editor but is not specialized for easy usage with flowmeters. It can be downloaded from our homepage [:material-link: vse-flow.com](https://www.vse-flow.com/en/downloads.html?scrollTo=software).
+    Alternatively you can also try using the OS 10.0 software for this purpose. It is a legacy software that also features a register editor but is not specialized for easy usage with flowmeters. It can be downloaded from our homepage [:material-link: vse-flow.com](https://www.vse-flow.com/software.html).
