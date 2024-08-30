@@ -1,0 +1,1202 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="2basics.html">
+      
+      
+        <link rel="next" href="4advanced.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Features - VSE EasyLoader v6.0.7 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="VSE EasyLoader v6.0.7 Documentation" class="md-header__button md-logo" aria-label="VSE EasyLoader v6.0.7 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSE EasyLoader v6.0.7 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="3features.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="de/3features.html" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="2basics.html" class="md-tabs__link">
+        
+  
+    
+  
+  Basics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="3features.html" class="md-tabs__link">
+        
+  
+    
+  
+  Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="4advanced.html" class="md-tabs__link">
+        
+  
+    
+  
+  Advanced
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="6faqs.html" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="7about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="VSE EasyLoader v6.0.7 Documentation" class="md-nav__button md-logo" aria-label="VSE EasyLoader v6.0.7 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    VSE EasyLoader v6.0.7 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2basics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="3features.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connection-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-the-device-to-the-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting the device to the computer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establishing-a-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Establishing a connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easy-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easy Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Easy Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-flowmeter-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom flowmeter definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom flowmeter definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-custom-flowmeter-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding custom flowmeter presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-and-removing-custom-flowmeter-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing and removing custom flowmeter presets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-second-flowmeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup second flowmeter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-conditioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal conditioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal conditioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linearization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linearization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analog output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-flowmeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected flowmeters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-importexport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file import/export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying the configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-parameter-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Parameter Editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Parameter Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factory-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factory reset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-up---download" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML Up- &amp; Download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Footnotes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4advanced.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="6faqs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="7about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h1>
+<h2 id="connection-setup"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.4 7.5c.8.8.8 2.1 0 2.8l-2.8 2.8-7.8-7.8 2.8-2.8c.8-.8 2.1-.8 2.8 0l1.8 1.8 3-3 1.4 1.4-3 3 1.8 1.8m-5.8 5.8-1.4-1.4-2.8 2.8-2.1-2.1 2.8-2.8-1.4-1.4-2.8 2.8-1.5-1.4-2.8 2.8c-.8.8-.8 2.1 0 2.8l1.8 1.8-4 4 1.4 1.4 4-4 1.8 1.8c.8.8 2.1.8 2.8 0l2.8-2.8-1.4-1.4 2.8-2.9Z"/></svg></span> Connection Setup<a class="headerlink" href="#connection-setup" title="Permanent link">#</a></h2>
+<p><img alt="" src="img/page_conn.png" /></p>
+<h3 id="connecting-the-device-to-the-computer">Connecting the device to the computer<a class="headerlink" href="#connecting-the-device-to-the-computer" title="Permanent link">#</a></h3>
+<p>Depending on the device and whether it is mounted in a table housing, you need to connect them to the pc using different methods. 
+You can use the integrated device connection diagrams of the EasyLoader without even connecting a device using the <code>CONNECTION DIAGRAM</code> button in the connected device card (see following image).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Connection method</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A341/A350</strong> (device only)</td>
+<td>Devices RS232 terminal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Crossed wires <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> DSUB9 connector <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> RS232-USB Adapter <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> PC</td>
+</tr>
+<tr>
+<td><strong>A341/A350</strong> (table housing)</td>
+<td>Housing DSUB9 connector <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> RS232-USB Adapter <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> PC<br><strong><em>OR</em></strong><br>Housing DSUB9 connector <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> 1:1 RS232 extension cable <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> RS232-USB Adapter <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> PC</td>
+</tr>
+<tr>
+<td><strong>FU210</strong> (via miniUSB)</td>
+<td>Devices miniUSB terminal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> USB-A to USB-Mini-B cable <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> PC</td>
+</tr>
+<tr>
+<td><strong>FU210</strong> (via RS232)</td>
+<td>Devices RS232 terminal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Crossed wires <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> DSUB9 connector <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> RS232-USB Adapter <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> PC</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="img/conndiagram.png" width="650" /></p>
+<h3 id="establishing-a-connection">Establishing a connection<a class="headerlink" href="#establishing-a-connection" title="Permanent link">#</a></h3>
+<p>To communicate with the measuring instrument a connection over the serial port must be established. </p>
+<p>After starting the EasyLoader the connection tab is shown. All available COM-Ports (except ports from Bluetooth devices) on the system are automatically shown. Using the <code>REFRESH</code> button, a new port scan will be initiated and the list gets refreshed. By clicking on a specific port in the list, a port scan and the connection process is initiated. The device preview will change according to the detected device type. The preview will show an image and a short description of the connected device. The buttons below can be used to open the user manual or the specific connection diagram. </p>
+<p>To disconnect a device, click on the large button saying <code>CONNECTED</code> or close the application. Also disconnecting the RS232 or USB cable will terminate the connection after a few seconds. </p>
+<p><img alt="" src="img/disconnect.png" /></p>
+<h3 id="firmware-version">Firmware version<a class="headerlink" href="#firmware-version" title="Permanent link">#</a></h3>
+<p>Futhermore, the firmware version can be read out using the corresponding button to check, whether your device is tested and compatible with the current version of EasyLoader. Using other/older firmware version may also work but correct functionality is not guaranteed. If any major problem occur, try using an older version of VSE EasyLoader (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> contact sales or download from <a href="https://www.vse-flow.com/en/software.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg></span> vse-flow.com</a>).</p>
+<p>The current software versions of the devices are listed in the following table:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Device</strong>  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M641.5 256c0 3.1-1.7 6.1-4.5 7.5L547.9 317c-1.4.8-2.8 1.4-4.5 1.4-1.4 0-3.1-.3-4.5-1.1-2.8-1.7-4.5-4.5-4.5-7.8v-35.6H295.7c25.3 39.6 40.5 106.9 69.6 106.9H392V354c0-5 3.9-8.9 8.9-8.9H490c5 0 8.9 3.9 8.9 8.9v89.1c0 5-3.9 8.9-8.9 8.9h-89.1c-5 0-8.9-3.9-8.9-8.9v-26.7h-26.7c-75.4 0-81.1-142.5-124.7-142.5H140.3c-8.1 30.6-35.9 53.5-69 53.5C32 327.3 0 295.3 0 256s32-71.3 71.3-71.3c33.1 0 61 22.8 69 53.5 39.1 0 43.9 9.5 74.6-60.4C255 88.7 273 95.7 323.8 95.7c7.5-20.9 27-35.6 50.4-35.6 29.5 0 53.5 23.9 53.5 53.5s-23.9 53.5-53.5 53.5c-23.4 0-42.9-14.8-50.4-35.6H294c-29.1 0-44.3 67.4-69.6 106.9h310.1v-35.6c0-3.3 1.7-6.1 4.5-7.8 2.8-1.7 6.4-1.4 8.9.3l89.1 53.5c2.8 1.1 4.5 4.1 4.5 7.2z"/></svg></span></th>
+<th><strong>Software version (as of 23.01.2023)</strong>  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160v192h192V160z"/></svg></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A341</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>A350</strong></td>
+<td>F</td>
+</tr>
+<tr>
+<td><strong>FU210</strong></td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<!---
+**FU252** | C
+-->
+
+<h2 id="easy-configuration"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 20v2H3c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h18c1.1 0 2 .9 2 2v8.1l-.2-.2c-.5-.5-1.1-.8-1.8-.8V6H3v14h8m10.4-6.7 1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2s.3.1.4.2m-.3 3.6-6 6.1H13v-2.1l6.1-6.1 2 2.1Z"/></svg></span>  Easy Configuration<a class="headerlink" href="#easy-configuration" title="Permanent link">#</a></h2>
+<p><img alt="" src="img/democonf.png" /></p>
+<div class="admonition info inline end">
+<p class="admonition-title">Only if connected</p>
+<p>Switching to a tab other than the <strong>Connection Setup</strong>, <strong>XML Preview</strong> and <strong>About</strong> tab is not possible if the connection has not yet been established.</p>
+</div>
+<h3 id="basic-settings">Basic settings<a class="headerlink" href="#basic-settings" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_basicsettings.png" /></p>
+<p>Start by selecting the flowmeter that is connected to the device. This information is important so the software knows the right nominal K-Factor value of the flowmeter for the register calculations. You can choose among all flowmeters that are distributed by VSE. If you want to add other flowmeters or encoder devices, you can create a custom flowmeter definition using the <code>ADD</code> button (futher explained <a href="#custom-flowmeter-definitions">here</a>). </p>
+<p>Next, input the interpolation factor that has been set in the flowmeter's preamplifier. Usually this information is written on the flowmeters type plate, e.g. <em>VSI 0,2/<ins>32</ins> GPO12V-42R11/X</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> IPF = 32.</p>
+<p>By default, the signal evaluation is set to <code>Quadrature (2 ch.)</code> which will result in the best measuring resolution, response time and will also enable direction detection. Depending on the flowmeter, you may have to choose the <code>Single Channel</code> evaluation type, e.g. for the VHM, VS-HT or EF series. Also check the connection so that the <em>active</em> wire (either white or black, check datasheet) is connected to the input A of the device. Please note that direction detection will not work, if using the single channel evaluation method.</p>
+<div class="admonition info">
+<p class="admonition-title">Input configuration</p>
+<p>Depending on whether you have an <strong>Push-Pull</strong>, <strong>NPN</strong> or <strong>PNP</strong> output on your flowmeter you may also have to change the input configuration register of your flowmeter manually. By default the option is set to <strong>PNP</strong> and works with most flowmeters. Please refer to the user manual for an explaination how to do this.</p>
+</div>
+<p>The software will also check, if the combination of flowmeter and interpolation factor exceeds the recommended maximum output frequency of the flowmeter of 125 kHz. Consider lowering the IPF of the preamplifier if a warning pops-up.</p>
+<h4 id="custom-flowmeter-definitions">Custom flowmeter definitions<a class="headerlink" href="#custom-flowmeter-definitions" title="Permanent link">#</a></h4>
+<h5 id="adding-custom-flowmeter-presets">Adding custom flowmeter presets<a class="headerlink" href="#adding-custom-flowmeter-presets" title="Permanent link">#</a></h5>
+<p><img alt="" src="img/custom_fm_newbutton.png" width="350" /></p>
+<p><img alt="" src="img/custom_fm.png" width="450" /></p>
+<p>By clicking on the <code>ADD</code> button, a new flowmeter definition can be added, if the used flowmeter does not appear in the list. You can specify a name, the nominal/maximum flowrate which will be used for the fullscale analog output, the K-Factor and a list of selectable interpolation factors. The list of IPFs has to be a comma seperated list. There can not be two flowmeter definitions with the same name. If this is the case the preset will not be saved. </p>
+<p>By importing a configuration into the EasyLoader (which will be described in <a href="#configuration-file-importexport">this chapter</a>) the included flowmeter preset will be imported and permanently saved, if it is missing in the current list.</p>
+<p>By default, the currently active preset will be copied and filled as template values for a new flowmeter definition. This can especially be useful if you have an older flowmeter on hand that has other interpolation factors. With this feature you can then easily create a definition for the older preamplifier version.  </p>
+<h5 id="managing-and-removing-custom-flowmeter-presets">Managing and removing custom flowmeter presets<a class="headerlink" href="#managing-and-removing-custom-flowmeter-presets" title="Permanent link">#</a></h5>
+<p>The <code>Flowmeter preset editor</code> can be opened using the <strong>Gear</strong> icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"/></svg></span>) next to the <code>ADD</code> button.</p>
+<p>Here you can view all custom flowmeters that you added. There is also an option to remove the preset. In-place editing is <em>not</em> supported. To do that, just recreate the preset.</p>
+<p><img alt="" src="img/custom_fm_editor.png" /></p>
+<h4 id="setup-second-flowmeter">Setup second flowmeter<a class="headerlink" href="#setup-second-flowmeter" title="Permanent link">#</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Only for A341</p>
+<p>This feature is only available for the A341 because it is the only device with two full encoder interfaces. The evaluation of two encoders is certainly also possible on the other devices, but with disadvantages like missing <em>quadrature channel evaluation</em> / <em>direction detection</em> support.</p>
+</div>
+<p>With the A341 the EasyLoader supports setting up a second flowmeter. When checked, the same options as before have to be set for the other flowmeter. At the bottom of the new dialog the <code>Calculation mode</code> has to specified. This setting will say how the two measurement values will be handled and displayed on the device. You can choose between showing only either flowmeter A or B and math functions like A+B, A-B and A/B. </p>
+<p><img alt="" src="img/second_fm_dialog.png" /></p>
+<h3 id="signal-conditioning">Signal conditioning<a class="headerlink" href="#signal-conditioning" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_signalcond.png" /></p>
+<h4 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">#</a></h4>
+<div class="admonition tip inline end">
+<p class="admonition-title">Tip: Use display refresh</p>
+<p>To create a more stable reading but also want a fast analog output, consider to leave the <code>Filter level</code> low/off and set the <code>Display Refresh Interval</code> higher.</p>
+</div>
+<p>Here you can set up filters and linearization functions for the measured frequencies. By default no filtering is used to ensure the fastest display and analog output reaction. If there is very unsteady flow, the filter can be used to smooth out the vibrations and create a stable reading. You can choose between averaging and exponential filters. </p>
+<p><strong>Moving average filter</strong></p>
+<p><img alt="" src="img/avg%20a350%2050mssamp.png" />`</p>
+<p><strong>Exponential filter</strong></p>
+<p><img alt="" src="img/exp%20a350.png" /></p>
+<p><em>(The shown images show the analog output of an A350 with a sampling time of 50 ms and different filter settings)</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Display refresh <span class="arithmatex">\(\neq\)</span> Analog output</p>
+<pre><code>For display-devices, the analog output refresh time works independently of the configured display refresh interval. Therefore a slower display refresh time can be set while still having a fast analog output. The filter settings on the other hand will be used for both the display and the analog output.
+</code></pre>
+</div>
+<details class="question">
+<summary>I need more filtering - the filter levels are not enough!</summary>
+<p>The <code>SAMPLING TIME</code> register defines the interval at which the filter is feeded with new values. This directly influences the filter dynamics. By default the <code>SAMPLING TIME</code> is set to the lowest possible value in order to achieve an fast output reaction. Therefore the effects of the configured filter level may not be enough for the application. To create a bigger filter influence, the <code>SAMPLING TIME</code> must be increased.</p>
+</details>
+<h4 id="linearization">Linearization<a class="headerlink" href="#linearization" title="Permanent link">#</a></h4>
+<p>Most flowmeters output a pulse signal or frequency that corresponds to the current flowrate (<span class="arithmatex">\(f\sim Q\)</span>). For displacement-type flowmeters, this relation is not perfectly linear due to manufacturing tolerances and the effects of fluid viscosity. This leads to a K-Factor that is not constant. Especially in the lower flow range, the K-Factor will be certainly lower. Because of this, flowmeters requiring a high accurancy over the whole flowrange will be calibrated. If you have a calibration certificate on hand, you can input the values into the EasyLoader to let the device internally calculate the correct flowrate based on the flowmeter's specific Frequency-to-K-Factor table.</p>
+<figure>
+<p><img alt="" src="img/curve_error_fm.png" />
+  </p>
+<figcaption>Typical error curve of a displacement-type flowmeter <br>[Source: ABB Measurement &amp; Analytics: Industrielle Durchfluss-Messtechnik - Grundlagen und Praxis (2017), p. 32]</figcaption>
+</figure>
+<div class="admonition info inline end">
+<p class="admonition-title">Dot (.) as decimal seperator</p>
+<p>Take note that the program uses the dot as a decimal seperator and no thousands seperator. If you use a comma (,) it will be replaced by the dot (.) while entering or pasting data.</p>
+</div>
+<p>Using the <strong>Linearization Table Editor</strong> the linearization data can be entered. You can either manually type in all the data or use the copy and paste functionality. The standard way of doing so is preparing your calibration data in an Excel sheet in two columns and then copying (<code>CTRL + C</code>) and pasting (<code>CTRL + V</code>) the data into the linearization window. Be sure to exclude column headers while copying. </p>
+<p><img alt="" src="img/copythis.png" /></p>
+<p>The two data columns that you need are:</p>
+<ul>
+<li>Flowmeter output frequency <span class="arithmatex">\(f\)</span> [Hz]</li>
+<li>Flowmeter K-Factor <span class="arithmatex">\(K_{fact}\)</span> [pulses/l]</li>
+</ul>
+<p>The third column - <em>the flowrate</em> <span class="arithmatex">\(Q\)</span> - will be calculated automatically.</p>
+<p><img alt="" src="img/lin_editor.png" /> </p>
+<p>Use the <code>SORT AND ALIGN</code> button to <em>bottom align</em> and sort randomly input data ascending. This function will also be automatically performed by clicking the <code>APPLY SETTINGS</code> button. By clicking the <code>CLEAR</code> button, the whole linearization table will be replaced by zero values to start from scratch.</p>
+<p>Confirm the input linearization points by clicking <code>APPLY SETTINGS</code>. Make sure that the corresponding checkbox is active in the <strong>Signal conditioning</strong> card if you want to transmit the calibration points into the device.</p>
+<div class="admonition info">
+<p class="admonition-title">First linearization point</p>
+<p>You don't need to add a first linearization point with zero values (0 | 0). It will be automatically added invisibly in the background!</p>
+</div>
+<details class="question">
+<summary>FAQ: Why is there a less than advertised number of linearization points available?<br>FAQ: Why does it throw the error: '<em>too many columns</em>'?</summary>
+<p>This is due to the fact that the first linearization register value always needs to be zero and the last one always needs to be the maximum value possible. This prevents the display value getting stuck if frequencies over the maximum linearized frequency occur, e.g. for detecting overload conditions. The other input fields that are shown can be completely filled with values. Therefore the number of available calibration points shrinks by two.</p>
+<p>If you have a calibration certificate on hand with more than the allowed number of points, the best way to handle this is to skip some linearization points where the change of the <span class="arithmatex">\(K_{fact}\)</span> value is the least or where the error curve is mostly linear. </p>
+</details>
+<h3 id="analog-output">Analog output<a class="headerlink" href="#analog-output" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_analog.png" /></p>
+<p>On the <strong>Analog Output</strong> card you can select the analog output port configuration. On all devices you can choose either a voltage or a current output. 
+The options are:</p>
+<details class="question inline end">
+<summary>FAQ: Why is my analog output zero even though flow is present?</summary>
+<ol>
+<li>Check if your flow direction is negative. Try changing the <code>direction</code> register, swapping A and B wires, rotating the flowmeter or flipping the switch on the preamp.</li>
+<li>Check if you have selected <code>Quadrature (2 ch.)</code> even though your flowmeter only has one channel.</li>
+</ol>
+</details>
+<ul>
+<li>Voltage output (+/- 10 V)</li>
+<li>Voltage output (0 - 10 V)</li>
+<li>Current output (0 - 20 mA)</li>
+<li>Current output (4 - 20 mA)</li>
+</ul>
+<div class="admonition danger inline end">
+<p class="admonition-title">Important for maximum measurement accuracy/resolution</p>
+<p>To keep signal noise on the analog output to a minimum, it is always recommended to choose the lowest fullscale flowrate that still fits your application (include some flow overload detection margin). This will ensure that you are making the most of the 16-bit analog output of your device. </p>
+</div>
+<p>Futhermore you have to specify the flowrate that corresponds to the analog fullscale value. For example: A <em>VSI 1</em> flowmeter has a nominal maximum flowrate of <span class="arithmatex">\(Q_{nom}=80 \frac{\textrm{l} }{\textrm{min} }\)</span>. If you for example have a high fluid viscosity and only use the flowmeter until half its nominal range, you can increase the effective analog resolution by using a lower fullscale flowrate of <span class="arithmatex">\(Q_{nom}=40 \frac{\textrm{l} }{\textrm{min} }\)</span>.</p>
+<p>If linearization is used, this value will still be the reference value for the fullscale flowrate. The last linearization point should still be approximately in the range of this value.</p>
+<div class="admonition info">
+<p class="admonition-title">Hint: Display value <span class="arithmatex">\(\sim\)</span> Analog value</p>
+<p>For the A341 and A350 the analog voltage/current is always proportional to the shown display value.</p>
+</div>
+<h3 id="display-settings">Display settings<a class="headerlink" href="#display-settings" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_display.png" /></p>
+<div class="admonition tip inline end">
+<p class="admonition-title">Tip: Conditional display colors with the A350</p>
+<p>If you're using the A350, you can configure up to four predefined values that change the color of the display, e.g. to show that the flowrate exceeds the limits of the application (change display: <em>green</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> <em>red</em>). With all devices you can also use these flow/volume preset values to trigger digital outputs.</p>
+</div>
+<p>The <strong>Display settings</strong> define, how the measured flowrate is displayed on the display devices A341 and A350. </p>
+<p>For the A350 you can choose between three <code>display color options</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> <em>red</em>, <em>green</em> and <em>yellow</em>. For the A341, the digits will always be coloured red.</p>
+<p>The <code>display refresh interval</code> can be used to adjust how fast the display should update its value. This setting has no influence on the dynamics of the analog output. To make manual readouts it is recommended to choose a slower display refresh time and using the filter function of the <a href="#signal-conditioning">Signal conditioning</a> card. </p>
+<p>The slider <code>decimal places</code> sets the number of decimal places shown on the display, taking into account the maximum number of displayable digits of the device. If negative flowrates can also occur in the application, the <code>sign digit</code> should also be included to reserve a digit for it.</p>
+<div class="admonition danger">
+<p class="admonition-title">Important: Choose large number of decimal places</p>
+<p>Generally, the number of digits should be as large as possible to minimize the effects of internal rounding errors in the device. Especially if using the linearization function, more decimal places lead to a more precise measurement.</p>
+</div>
+<h3 id="advanced-settings">Advanced settings<a class="headerlink" href="#advanced-settings" title="Permanent link">#</a></h3>
+<p>Under the <strong>Advanced settings</strong> you can configure a custom factor that is being multiplied with the calculated display value, analog end value and all linearization values. </p>
+<p>The base unit for this is <span class="arithmatex">\(\frac{\textrm{l}}{\textrm{min}}\)</span>. To for example show the display value in another unit, simply use the conversion factor from <span class="arithmatex">\(\frac{\textrm{l} }{\textrm{min}}\)</span> to your custom unit. To find a factor, you can use the calculator in the <a href="#footnotes">footnotes</a>. Here are some examples:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Target unit</strong></th>
+<th><strong>Conversion factor</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\frac{\textrm{ml}}{\textrm{min}} = \frac{\textrm{cm}^3}{\textrm{min}}\)</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Millilitres per minute</td>
+<td>1000.0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\frac{\textrm{l}}{\textrm{h}}\)</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Litres per hour</td>
+<td>60.0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\frac{\textrm{l}}{\textrm{s}}\)</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Litres per second</td>
+<td><span class="arithmatex">\(\frac{1}{60} \approx\)</span>  0.0166666667</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\textrm{gpm}\)</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Gallon (fluid, US) per minute</td>
+<td>0.26417205235815</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\frac{\textrm{in}^3}{\textrm{min}}\)</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 15V9h8V4.16L19.84 12 12 19.84V15H4Z"/></svg></span> Cubic inch per minute</td>
+<td>61.023744094732</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selected-flowmeters">Selected flowmeters<a class="headerlink" href="#selected-flowmeters" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_selected.png" width="150" /></p>
+<p>The <strong>Selected flowmeters</strong> card shows information about the technical specification of the selected flowmeters like the nominal K-Factor and maximum (nominal) flowrate. Also the selected values for IPF and channel count are added. Changes of the custom fullscale flowrate are not shown in the card.</p>
+<h3 id="configuration-file-importexport">Configuration file import/export<a class="headerlink" href="#configuration-file-importexport" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/e_importexport.png" /></p>
+<p>Using the <code>IMPORT</code> and <code>EXPORT</code> buttons in the top row of the <strong>Easy configuration</strong> tab you can save and restore so called <code>*.easyConf</code> presets. They contain all selected/configured values of the <strong>Easy configurator</strong>, but <strong><em>NOT</em></strong> settings that are currently saved on the device. You can use this filetype for most use cases.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention: .easyConf-file <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.08 4.61 1.84.79L14.8 8H19v2h-5.05l-1.72 4H19v2h-7.62l-1.46 3.4-1.84-.79L9.2 16H5v-2h5.06l1.71-4H5V8h7.63l1.45-3.39Z"/></svg></span> .xml-file</p>
+<p>To download the settings (= <em>register values</em>) stored on the device, use the <a href="#xml-up---download">XML Downloader</a>. This will generate an .xml-file that contains all device registers. If you for example want to email your exact device configuration, you should generally perform a device download. This filetype can also be opened in the <strong>user software OS 10.0</strong><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. </p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">FAQ: Why should I use the <code>*.easyConf</code> files if I can use the <code>.xml</code> download function?</p>
+<p>The <code>*.xml</code> files only contain the raw register values. The new <code>*.easyConf</code> filetype contains all configured settings including the original linearization values and the actual flowmeter name/values. This approach leaves more room for later editing of settings. 
+On the other hand, the <code>*.easyConf</code> file only contains the selectable settings. If you want to save the complete device state (with limit values, user inputs, etc.), you should rather use the <code>*.xml</code> filetype.</p>
+</div>
+<p>If the <code>*.easyConf</code>-file contains a <a href="#custom-flowmeter-definitions">custom flowmeter definition</a> it will be imported and permanently (<em>until a program settings reset</em>) added to your list of flowmeter definitions if it doesn't exist.</p>
+<h3 id="applying-the-configuration">Applying the configuration<a class="headerlink" href="#applying-the-configuration" title="Permanent link">#</a></h3>
+<p><img align="right" alt="" src="img/upload_conf_btn.png" /></p>
+<p>After completing the configuration, the corresponding device register values have to be calculated and uploaded into the device. In order to do this, click on the <code>UPLOAD CONFIG</code> button. </p>
+<p>By default the <code>UPLOAD CONFIG</code> performs the register calculation, uploads the changed registers, applies the changes and performs an "EEPROM Store" command on the device to permanently save the settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip: Alternative upload procedure (advanced)</p>
+<p><img align="right" alt="" src="img/change_button.png" /></p>
+<p>If you want more control about what and how you upload the changed registers to the device, you can change the <code>UPLOAD CONFIG</code> to <code>CALC REGISTERS</code> to only calculate the register values. You can then proceed to the Parameter Editor using the <code>GO TO PARAMETER PAGE</code> button and review the changes before uploading them using the <code>UPLOAD</code> button.</p>
+<p>In order to do this, right-click on the <code>UPLOAD CONFIG</code> button and select ```Change button to "CALC REGISTERS".</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v184.4c-17-15.2-39.4-24.4-64-24.4H64c-24.6 0-47 9.2-64 24.4V96zm64 192h384c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v-64c0-35.3 28.7-64 64-64zm256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128-32a32 32 0 1 0-64 0 32 32 0 1 0 64 0z"/></svg></span>  One advantage of this feature is, that you can decide yourself if you want the parameters stored only temporarily instead of permanently by unchecking <code>Permanent storage</code> in the Parameter Editor before uploading. </p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 1.07C7.05 1.56 4 4.92 4 9h7m-7 6a8 8 0 0 0 8 8 8 8 0 0 0 8-8v-4H4m9-9.93V9h7c0-4.08-3.06-7.44-7-7.93Z"/></svg></span>  Another is, that you can undo/deselect individual changed registers by right- or middle-mouse-clicking them. </p>
+</li>
+</ul>
+</div>
+<!--
+```SET CONFIGURATION``` button and proceed to the next tab using the ```GO TO PARAMETER PAGE``` button. 
+
+![](img/uploadbtn.png){align=right}
+
+From there you can then click on the ```UPLOAD``` button to transfer, activate and permanently store the settings onto the connected device. If you ***do not*** want to permanently store the data (= apply only for this power-on cycle) then you have to deselect the ```Permanent storage``` checkbox in the parameter editor options before clicking ```UPLOAD```.
+
+![](img/para_mgr_options.png)
+
+!!! tip "Tip: Faster device parametrization"
+    ![](img/uploadconfignow.png){align=right}
+    If you want to skip the _>```GO TO PARAMETER PAGE``` and then press ```UPLOAD```_<-step you can reconfigure the ```SET CONFIGURATION``` button by right clicking on it and switching its functionality to ```UPLOAD CONFIG NOW```. With this enabled, the program will calculate the registers and instantly transmit the values over to the device. Make sure to have checked the ```Permanent storage``` option in the [device parameter editor](#device-parameter-editor) if this configuration should be permanent.
+
+    ![](img/right_click_setconf.png) 
+
+-->
+
+<h2 id="device-parameter-editor">Device Parameter Editor<a class="headerlink" href="#device-parameter-editor" title="Permanent link">#</a></h2>
+<p><img alt="" src="img/page_param.png" /></p>
+<p>After calculating the device's register values using the <strong>Easy configuration</strong> tab the <strong>Device Parameter Editor</strong> has to be used to transfer the changes register values to the device. The registers are displayed in a table view that contains the following columns:</p>
+<ul>
+<li><strong>Category</strong>: The general category, that the parameter belongs to. </li>
+<li><strong>Name</strong>: The name of the device register. This name matches the one used in the corresponding user manual.</li>
+<li><strong>Raw Value</strong>: The raw register value to be edited. All other colums are read-only.</li>
+<li><strong>Actual Value</strong>: Preview the effective device value with decimal places added.</li>
+<li><strong>Status</strong>: Shows if the displayed raw value differs from the device value. If the icon is <strong><em>filled</em></strong> the parameter was changed and is pending for upload.</li>
+<li><strong>Min / Max</strong>: The value range of the corresponding register value.</li>
+<li><strong>Register</strong>: The internal register code used to identify the register. (Hint: The relation between <em>Register name</em> and <em>Code</em> can change between firmware revisions.)</li>
+</ul>
+<p><img align="right" alt="" src="img/search%20function.png" /></p>
+<p>There is a search/filter function on top to quickly find a specific device register. It works independent of the <code>Show basic/all settings</code> option.</p>
+<p>There are three settings that can be changed in the <strong>device parameter editor</strong>. These program settings are saved on program exit and will be restored each time the EasyLoader is reopened. </p>
+<ul>
+<li><strong>Send on edit</strong>: Instantly sends a register change after a manual edit. This feature is useful if you want to play around with a value / fine adjust it.</li>
+<li><strong>Permanent storage</strong>: This sends an <code>EEPROM STORE</code> command immediately after changing a register value</li>
+<li><strong>Show basic/all settings</strong>: Only show the most relevant registers (<strong>default</strong>). Uncheck to see all available device registers.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Caution while using the <em>Send on edit</em>-feature</p>
+<p>Using the <code>Send on edit</code>-feature in conjunction with the <code>Permanent storage</code> option may wear out the device's EEPROM faster if many consecutive parameter adjustments are being made. You should rather disable the <code>Permanent storage</code> option while playing with a value and commit the final state after all settings are fixed with a click on the <code>UPLOAD</code> button with the <code>Permanent storage</code> option enabled. Most EEPROMs are made for ~100 000 write cycles.</p>
+</div>
+<p>In the top right corner you will find two buttons to initiate transfer actions:</p>
+<p><img align="right" alt="" src="img/refreshupload.png" /></p>
+<ul>
+<li><strong>REFRESH</strong>: Discards all currently changed values and downloads all register values from the device. </li>
+<li><strong>UPLOAD</strong>: Uploads all changed register values into the devices and verifies each uploaded register. </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip: Restore original value</p>
+<p>If you accidently changed a register value and want the original value (= the value that was last downloaded from the device) back, you can do so by right-clicking on the <code>Raw value</code> column of the corresponding register and selecting <code>Restore original value</code>. An even quicker way to do so is by clicking on the register row with the middle mouse button.</p>
+</div>
+<h3 id="factory-reset">Factory reset<a class="headerlink" href="#factory-reset" title="Permanent link">#</a></h3>
+<p>If the device does not behave like expected, you can try to do a factory reset. This will wipe all settings on the device and restore the default values. To do this, click on the <code>RESTORE FACTORY DEFAULTS</code> button in the bottom bar.</p>
+<p><img alt="" src="img/factoryreset.png" /></p>
+<h2 id="xml-up---download">XML Up- &amp; Download<a class="headerlink" href="#xml-up---download" title="Permanent link">#</a></h2>
+<p><img alt="" src="img/page_updownload.png" /></p>
+<div class="admonition info inline end">
+<p class="admonition-title">OS 10.0 compatible</p>
+<p>The generated <code>*.xml</code>-files can also be opened in older version of the EasyLoader or the <strong>user software OS 10.0</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+</div>
+<p>In the <strong>Parameter set management</strong> tab you can up- and download the complete device configuration from/to the previously described <code>*.xml</code>-files.
+This feature is useful if you want to make a device backup or you want to email your device configuration.</p>
+<p>To initiate a download, simply add a useful file comment (so the person opening your file knows about its contents) and hit the <code>START DOWNLOAD</code> button. The process starts and should finish in a few seconds as soon as the bottom progress bar is at 100%. The downloaded file can then be previewed using the internal <a href="2basics.html#xml-preview">XML Viewer</a>.</p>
+<p>An upload can be started by choosing a compatible <code>*.xml</code> file that matches the connected device type. If the devices do not match, the file can not be used for the upload process. To start the upload process, hit the <code>START UPLOAD</code> button.</p>
+<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">#</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Source:  <a href="https://www.convert-measurement-units.com/conversion-calculator.php?type=volumenstrom"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg></span> convert-measurement-units.com</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Source:  <a href="https://www.vse-flow.com/en/software.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg></span> vse-flow.com/downloads/software</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="2basics.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Basics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="4advanced.html" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Advanced
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "toc.integrate", "navigation.expand", "navigation.top", "navigation.footer", "content.tooltips", "content.tabs.link", "search.highlight"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

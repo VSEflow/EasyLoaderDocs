@@ -1,0 +1,955 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="3features.html">
+      
+      
+        <link rel="next" href="6faqs.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Advanced - VSE EasyLoader v6.0.7 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="VSE EasyLoader v6.0.7 Documentation" class="md-header__button md-logo" aria-label="VSE EasyLoader v6.0.7 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSE EasyLoader v6.0.7 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="4advanced.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="de/4advanced.html" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="2basics.html" class="md-tabs__link">
+        
+  
+    
+  
+  Basics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="3features.html" class="md-tabs__link">
+        
+  
+    
+  
+  Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="4advanced.html" class="md-tabs__link">
+        
+  
+    
+  
+  Advanced
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="6faqs.html" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="7about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="VSE EasyLoader v6.0.7 Documentation" class="md-nav__button md-logo" aria-label="VSE EasyLoader v6.0.7 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    VSE EasyLoader v6.0.7 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2basics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3features.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="4advanced.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Line Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-the-result-success-status-of-the-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining the Result / Success Status of the Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batch processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automating-lintable-upload-with-a-batch-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automating Lintable Upload with a Batch File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-batch-file-for-uploading-multiple-files-to-multiple-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example batch file for uploading multiple files to multiple devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explaination-what-the-batch-file-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explaination what the batch file does
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-offline-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating offline presets
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="6faqs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="7about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">#</a></h1>
+<h2 id="command-line-interface"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"/></svg></span> Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">#</a></h2>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h3>
+<p>The VSE EasyLoader 6.0.7 Headless Mode is a command-line program designed to facilitate the uploading of XML and XLSX files to a device via a serial port. This program eliminates the need for a graphical user interface, allowing for automated and batch processing of file uploads.</p>
+<p><img alt="" src="img/cmd1.png" /></p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h3>
+<p>To use the VSE EasyLoader 6.0.7 Headless Mode, execute the program with the following command-line options:</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> [command] [options]
+</code></pre></div>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h3>
+<p>The program supports the following commands:</p>
+<ul>
+<li><code>upload</code>: Uploads an XML file to a device via the specified COM port.</li>
+<li><code>lintable</code>: Uploads an EasyCal calibration to a device via the specified COM port.</li>
+</ul>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">#</a></h3>
+<p>Each command supports the following options:</p>
+<ul>
+<li>
+<p><code>--com &lt;com&gt;</code>: Specifies the COM port to use for communication. The <code>&lt;com&gt;</code> parameter should be replaced with the specific COM port number, such as <code>COM23</code>. This option is required for successful communication with the device.</p>
+</li>
+<li>
+<p><code>--xml &lt;xml&gt;</code> (for <code>upload</code> command): Specifies the path to the XML file containing the data to upload. The <code>&lt;xml&gt;</code> parameter should be replaced with the file path. It is necessary to provide a valid XML file for a successful upload.</p>
+</li>
+<li>
+<p><code>--xlsx &lt;xlsx&gt;</code> (for <code>lintable</code> command): Specifies the path to the XLSX file containing the data to upload. The <code>&lt;xlsx&gt;</code> parameter should be replaced with the file path. Ensure the XLSX file is properly formatted.</p>
+</li>
+<li>
+<p><code>--version</code>: Displays the version information for the program.</p>
+</li>
+<li>
+<p><code>-?, -h, --help</code>: Shows the help and usage information for the program.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>--com</code> argument is optional if only one device is connected to the PC. The program will then scan for ports and use the one it found. If there are none or more than one, it will error, and you will need to manually specify the COM port.</p>
+</div>
+<h3 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">#</a></h3>
+<p>Here are examples of how to use the VSE EasyLoader 6.0.7 Headless Mode program:</p>
+<p><strong>Uploading an XML file to a device on COM23:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> upload --com COM23 --xml <span class="s2">&quot;C:/path/to/file.xml&quot;</span>
+</code></pre></div>
+<p><strong>Uploading an EasyCal calibration to COM23:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> lintable --com COM23 --xlsx <span class="s2">&quot;C:/path/to/file.xlsx&quot;</span>
+</code></pre></div>
+<h3 id="obtaining-the-result-success-status-of-the-program">Obtaining the Result / Success Status of the Program<a class="headerlink" href="#obtaining-the-result-success-status-of-the-program" title="Permanent link">#</a></h3>
+<p>When using the VSE EasyLoader 6.0.7 Headless Mode, the output or result may not be displayed on the console by default. To capture the output, it is recommended to use the <code>&gt;</code> operator in the command line to redirect the output to a text file. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> upload --com COM23 --xml <span class="s2">&quot;C:/path/to/file.xml&quot;</span> <span class="p">&gt;</span> output.txt
+</code></pre></div>
+<p>By using the <code>&gt;</code> operator and specifying a file name (e.g., <code>output.txt</code>), you can save the program's output to a text file for later reference. Without redirecting the output, the program will still function properly, but no output will be shown on the console.</p>
+<h3 id="batch-processing">Batch processing<a class="headerlink" href="#batch-processing" title="Permanent link">#</a></h3>
+<h4 id="automating-lintable-upload-with-a-batch-file">Automating Lintable Upload with a Batch File<a class="headerlink" href="#automating-lintable-upload-with-a-batch-file" title="Permanent link">#</a></h4>
+<p>To simplify the upload process of EasyCal calibration spreadsheets, you can create a batch file that automatically finds the XLSX file in the current directory and uploads it using the VSE EasyLoader. Below is an example <code>.bat</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
+<span class="k">setlocal</span>
+
+<span class="c1">rem Define the path to the VSE EasyLoader executable</span>
+<span class="k">set</span> <span class="s2">&quot;easyloader_path=</span><span class="nv">%LOCALAPPDATA%</span><span class="s2">\VSE EasyLoader\VSE EasyLoader Reloaded.exe&quot;</span>
+
+<span class="c1">rem Check if the VSE EasyLoader executable exists</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">&quot;</span><span class="nv">%easyloader_path%</span><span class="s2">&quot;</span> <span class="p">(</span>
+    <span class="k">echo</span> VSE EasyLoader is not installed.
+    <span class="k">pause</span>
+    <span class="k">exit</span> /b
+<span class="p">)</span>
+
+<span class="c1">rem Check for any .xlsx files in the current directory</span>
+<span class="k">for</span> <span class="se">%%</span>f <span class="k">in</span> <span class="p">(</span>*.xlsx<span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+    <span class="k">set</span> <span class="s2">&quot;found_file=</span><span class="se">%%</span><span class="s2">~ff&quot;</span>
+    <span class="k">goto</span> <span class="p">:</span><span class="nl">file_found</span>
+<span class="p">)</span>
+
+<span class="k">echo</span> No XLSX file found in the current directory.
+<span class="k">pause</span>
+<span class="k">exit</span> /b
+
+<span class="p">:</span><span class="nl">file_found</span>
+<span class="k">echo</span> Found XLSX file: <span class="nv">%found_file%</span>
+<span class="k">echo</span> Uploading with VSE EasyLoader...
+<span class="s2">&quot;</span><span class="nv">%easyloader_path%</span><span class="s2">&quot;</span> lintable --xlsx <span class="s2">&quot;</span><span class="nv">%found_file%</span><span class="s2">&quot;</span> <span class="p">&gt;</span> nul <span class="mi">2</span><span class="p">&gt;&amp;</span><span class="mi">1</span>
+<span class="k">set</span> <span class="s2">&quot;exit_code=</span><span class="nv">%ERRORLEVEL%</span><span class="s2">&quot;</span>
+
+<span class="k">if</span> <span class="nv">%exit_code%</span><span class="o">==</span>0 <span class="p">(</span>
+    <span class="k">echo</span> Success!
+<span class="p">)</span> <span class="k">else</span> <span class="p">(</span>
+    <span class="k">echo</span> EasyLoader exited with code: <span class="nv">%exit_code%</span>
+<span class="p">)</span>
+
+<span class="k">pause</span>
+</code></pre></div>
+<p>This batch file checks the current directory for any <code>.xlsx</code> files. If exactly one file is found, it will proceed to upload that file using the VSE EasyLoader. The script pauses after execution, allowing you to view the program's result and output in the command shell.</p>
+<h4 id="example-batch-file-for-uploading-multiple-files-to-multiple-devices">Example batch file for uploading multiple files to multiple devices<a class="headerlink" href="#example-batch-file-for-uploading-multiple-files-to-multiple-devices" title="Permanent link">#</a></h4>
+<p>This example batch file demonstrates how to automate the process of uploading multiple files to multiple devices using the VSE EasyLoader 6.0.7 Headless Mode. By leveraging the capabilities of a batch file, you can streamline and simplify the uploading process, saving time and effort.</p>
+<p>To use this batch file, follow these steps:</p>
+<ol>
+<li>
+<p>Open Editor or a similiar text editing program to create a new file.</p>
+</li>
+<li>
+<p>Paste the following code into the text editor:
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
+<span class="k">echo</span> VSE EasyLoader v6.0.7 Batch Upload (3x)
+<span class="k">echo</span>:
+
+<span class="k">cd</span> /D <span class="s2">&quot;</span><span class="nv">%LOCALAPPDATA%</span><span class="s2">\VSE EasyLoader&quot;</span>
+<span class="c1">REM === CUSTOMER INFO ===</span>
+<span class="c1">REM === CHANGE THE COM PORTS AND PARAMETER FILE PATHS IN THE FOLLOWING 3 COMMANDS ===</span>
+
+<span class="k">echo</span> Starting upload of first device...
+<span class="k">START</span> /B <span class="s2">&quot;&quot;</span> <span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> --com <span class="s2">&quot;COM8&quot;</span> --xml <span class="s2">&quot;C:\tmp\upload.xml&quot;</span> <span class="p">&gt;</span> ezldr_log1.txt
+<span class="k">echo</span> Starting upload of second device...
+<span class="k">START</span> /B <span class="s2">&quot;&quot;</span> <span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> --com <span class="s2">&quot;COM9&quot;</span> --xml <span class="s2">&quot;C:\tmp\upload.xml&quot;</span> <span class="p">&gt;</span> ezldr_log2.txt
+<span class="k">echo</span> Starting upload of third device...
+<span class="k">START</span> /B <span class="s2">&quot;&quot;</span> <span class="s2">&quot;VSE EasyLoader Reloaded.exe&quot;</span> --com <span class="s2">&quot;CO10&quot;</span> --xml <span class="s2">&quot;C:\tmp\upload.xml&quot;</span> <span class="p">&gt;</span> ezldr_log3.txt
+
+<span class="c1">REM Check process completion</span>
+<span class="k">echo</span> Waiting for EasyLoader processes to finish...
+<span class="p">:</span><span class="nl">loop</span>
+tasklist /fi <span class="s2">&quot;imagename eq VSE EasyLoader Reloaded.exe&quot;</span> <span class="p">|</span>find <span class="s2">&quot;:&quot;</span> <span class="p">&gt;</span> nul
+<span class="k">if</span> <span class="k">errorlevel</span> <span class="mi">1</span> <span class="k">goto</span> <span class="nl">loop</span>
+
+<span class="k">echo</span> Waiting for output logs to finish writing.
+<span class="p">:</span><span class="nl">chk</span>
+<span class="c1">REM Wait for 1 second</span>
+timeout /T 1 /NOBREAK <span class="p">&gt;</span> nul
+
+<span class="c1">REM Check if all instances have finished</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> ezldr_log1.txt <span class="k">goto</span> <span class="nl">chk</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> ezldr_log2.txt <span class="k">goto</span> <span class="nl">chk</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> ezldr_log3.txt <span class="k">goto</span> <span class="nl">chk</span>
+
+<span class="c1">REM Check return codes</span>
+<span class="k">set</span> <span class="nv">success</span><span class="p">=</span>true
+findstr /C:<span class="s2">&quot;Success! :)&quot;</span> ezldr_log1.txt <span class="p">&gt;</span> nul <span class="p">||</span> <span class="k">set</span> <span class="nv">success</span><span class="p">=</span>false 
+findstr /C:<span class="s2">&quot;Success! :)&quot;</span> ezldr_log2.txt <span class="p">&gt;</span> nul <span class="p">||</span> <span class="k">set</span> <span class="nv">success</span><span class="p">=</span>false
+findstr /C:<span class="s2">&quot;Success! :)&quot;</span> ezldr_log3.txt <span class="p">&gt;</span> nul <span class="p">||</span> <span class="k">set</span> <span class="nv">success</span><span class="p">=</span>false
+
+<span class="k">if</span> <span class="nv">%success%</span><span class="o">==</span>true <span class="p">(</span>
+  <span class="k">echo</span> SUCCESS: All uploads successful.
+<span class="p">)</span> <span class="k">else</span> <span class="p">(</span>
+  <span class="k">echo</span> ERROR: At least one upload failed.
+<span class="p">)</span>
+
+<span class="c1">REM Clean up output files</span>
+<span class="k">del</span> ezldr_log1.txt
+<span class="k">del</span> ezldr_log2.txt
+<span class="k">del</span> ezldr_log3.txt
+
+<span class="c1">REM Keep console window open</span>
+<span class="k">echo</span>:
+<span class="k">pause</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Update the batch file with the necessary information:</p>
+</li>
+<li>Modify the 3 commands file to include the COM ports of the devices you wish to upload files to. Each COM port should be listed on a separate line.</li>
+<li>
+<p>Set the path to the XML files you want to upload into the specific devices.</p>
+</li>
+<li>
+<p>Save the file to a location of your choice. Make sure the file ending is <code>*.bat</code>.</p>
+</li>
+<li>
+<p>Execute the batch file by double clicking it.</p>
+</li>
+</ol>
+<h4 id="explaination-what-the-batch-file-does">Explaination what the batch file does<a class="headerlink" href="#explaination-what-the-batch-file-does" title="Permanent link">#</a></h4>
+<p>This batch file automates the upload process for three devices using VSE EasyLoader v6.0.5. Here's a description of what the batch file does:</p>
+<ol>
+<li>
+<p>The <code>@echo off</code> command ensures that the commands executed in the batch file are not echoed in the console.</p>
+</li>
+<li>
+<p>The <code>echo</code> commands display information about the batch upload process, such as the version of VSE EasyLoader being used and the number of devices being uploaded.</p>
+</li>
+<li>
+<p>The <code>cd /D "%LOCALAPPDATA%\VSE EasyLoader"</code> command changes the current directory to the location where VSE EasyLoader is installed.</p>
+</li>
+<li>
+<p>The three <code>START /B</code> commands initiate the upload process for each device. Each command launches the "VSE EasyLoader Reloaded.exe" program with specific command-line parameters, including the COM port and the path to the XML file to be uploaded. The output logs for each upload are redirected to separate text files (<code>ezldr_log1.txt</code>, <code>ezldr_log2.txt</code>, <code>ezldr_log3.txt</code>).</p>
+</li>
+<li>
+<p>The batch file then waits for all the EasyLoader processes to finish using a loop and the <code>tasklist</code> command. Once all processes have completed, the batch file proceeds to the next step.</p>
+</li>
+<li>
+<p>The batch file waits for a short duration using the <code>timeout</code> command to ensure that the output logs finish writing.</p>
+</li>
+<li>
+<p>It then checks if the output logs for all three devices exist. If any of the logs are missing, it returns to the previous step to continue waiting for them to be generated.</p>
+</li>
+<li>
+<p>The batch file checks the return codes in the output logs to determine the success or failure of each upload. If any of the logs indicate a failure, the variable <code>success</code> is set to <code>false</code>.</p>
+</li>
+<li>
+<p>Based on the value of the <code>success</code> variable, the batch file displays either a success message indicating that all uploads were successful or an error message indicating that at least one upload failed.</p>
+</li>
+<li>
+<p>The output log files (<code>ezldr_log1.txt</code>, <code>ezldr_log2.txt</code>, <code>ezldr_log3.txt</code>) are then deleted to clean up the files generated during the upload process.</p>
+</li>
+<li>
+<p>Finally, the <code>echo</code> and <code>pause</code> commands keep the console window open, allowing the user to view the output before closing it.</p>
+</li>
+</ol>
+<p>Please note that to use this batch file, you should make the necessary modifications to the COM ports and file paths in the three upload commands to match your specific configuration.</p>
+<h2 id="creating-offline-presets"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7.25 2c-.69 0-1.351.13-1.957.371a.75.75 0 1 0 .554 1.394c.43-.17.903-.265 1.403-.265a3.72 3.72 0 0 1 3.541 2.496.75.75 0 0 0 .709.504c1.676 0 3 1.324 3 3a3 3 0 0 1-.681 1.92.75.75 0 0 0 1.156.955A4.496 4.496 0 0 0 16 9.5a4.472 4.472 0 0 0-3.983-4.471A5.222 5.222 0 0 0 7.25 2ZM.72 1.72a.75.75 0 0 1 1.06 0l2.311 2.31c.03.025.056.052.08.08l8.531 8.532.035.034 2.043 2.044a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-1.8-1.799a4.54 4.54 0 0 1-.42.019h-8A3.474 3.474 0 0 1 0 10.5c0-1.41.809-2.614 2.001-3.17a5.218 5.218 0 0 1 .646-2.622L.72 2.78a.75.75 0 0 1 0-1.06ZM3.5 7.25c.004.161.018.322.041.481a.75.75 0 0 1-.557.833c-.86.22-1.484.986-1.484 1.936 0 1.124.876 2 2 2h6.94L3.771 5.832A3.788 3.788 0 0 0 3.5 7.25Z"/></svg></span> Creating offline presets<a class="headerlink" href="#creating-offline-presets" title="Permanent link">#</a></h2>
+<p>EasyLoader can also be used to create a configuration file (<code>*.easyConf</code>-File) without a device connection. </p>
+<p>In order to do this, you first have to go to the <strong>About EasyLoader</strong> tab using the sidebar. Then click on the <strong>SETTINGS MENU</strong> to open a context menu where you select the option <code>Simulate device connection for *.easyConf creation</code>. </p>
+<p><img alt="offline1" src="img/offline1.png" /></p>
+<p><img alt="offline2" src="img/offline2.png" /></p>
+<p>Now select the device type that you want to create the Configuration for. The Easy Configuration tab then switches to the right layout for the device specific settings. </p>
+<p><img alt="offline3" src="img/offline3.png" /></p>
+<p>You can now switch to the <strong>Easy Configuration</strong> tab and create your preset. Use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4Z"/></svg></span> Save button at the top to store your settings in a <code>*.easyConf</code> file.</p>
+<p><img alt="offline4" src="img/democonf.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="3features.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Features">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Features
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="6faqs.html" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                FAQ
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "toc.integrate", "navigation.expand", "navigation.top", "navigation.footer", "content.tooltips", "content.tabs.link", "search.highlight"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

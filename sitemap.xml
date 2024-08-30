@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>index.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="index.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/index.html"/>
+    </url>
+    <url>
+        <loc>2basics.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="2basics.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/2basics.html"/>
+    </url>
+    <url>
+        <loc>3features.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="3features.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/3features.html"/>
+    </url>
+    <url>
+        <loc>4advanced.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="4advanced.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/4advanced.html"/>
+    </url>
+    <url>
+        <loc>6faqs.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="6faqs.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/6faqs.html"/>
+    </url>
+    <url>
+        <loc>7about.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="7about.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/7about.html"/>
+    </url>
+    <url>
+        <loc>de/index.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="index.html"/>
+    </url>
+    <url>
+        <loc>de/2basics.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/2basics.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="2basics.html"/>
+    </url>
+    <url>
+        <loc>de/3features.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/3features.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="3features.html"/>
+    </url>
+    <url>
+        <loc>de/4advanced.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/4advanced.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="4advanced.html"/>
+    </url>
+    <url>
+        <loc>de/6faqs.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/6faqs.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="6faqs.html"/>
+    </url>
+    <url>
+        <loc>de/7about.html</loc>
+        <lastmod>2024-08-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/7about.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="7about.html"/>
+    </url>
+</urlset>
