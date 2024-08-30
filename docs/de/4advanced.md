@@ -1,49 +1,112 @@
 # Erweiterte Funktionen
 
-## :octicons-command-palette-16: Kommandozeilen-Schnittstelle
+## :octicons-command-palette-16: Befehlszeilenschnittstelle
 
 ### Beschreibung
-Der VSE EasyLoader 6.0.5 Headless Mode ist ein Kommandozeilenprogramm, das das Hochladen von XML-Dateien auf ein Gerät über eine serielle Schnittstelle erleichtert. Dieses Programm macht eine grafische Benutzeroberfläche überflüssig und ermöglicht die automatische und stapelweise Verarbeitung von Datei-Uploads.
+Der VSE EasyLoader 6.0.7 Headless Mode ist ein Befehlszeilenprogramm, das entwickelt wurde, um das Hochladen von XML- und XLSX-Dateien auf ein Gerät über einen seriellen Anschluss zu erleichtern. Dieses Programm eliminiert die Notwendigkeit einer grafischen Benutzeroberfläche und ermöglicht automatisierte und Batch-Uploads von Dateien.
 
 ![](img/cmd1.png)
 
 ### Verwendung
-Um den VSE EasyLoader 6.0.5 Headless Mode zu verwenden, führen Sie das Programm mit den folgenden Kommandozeilenoptionen aus:
+Um den VSE EasyLoader 6.0.7 Headless Mode zu verwenden, führen Sie das Programm mit den folgenden Befehlszeilenoptionen aus:
 
 ``` batch
-"VSE EasyLoader Reloaded.exe" [Optionen]
+"VSE EasyLoader Reloaded.exe" [command] [options]
 ```
+
+### Befehle
+Das Programm unterstützt die folgenden Befehle:
+
+- `upload`: Lädt eine XML-Datei über den angegebenen COM-Port auf ein Gerät hoch.
+- `lintable`: Lädt eine EasyCal-Kalibrierung über den angegebenen COM-Port auf ein Gerät hoch.
 
 ### Optionen
-Das Programm unterstützt die folgenden Kommandozeilenoptionen:
+Jeder Befehl unterstützt die folgenden Optionen:
 
-- `--com <com>`: Gibt den COM-Port an, der für die Kommunikation verwendet werden soll. Der Parameter "<com>" sollte durch die spezifische COM-Anschlussnummer ersetzt werden, z. B. COM23. Diese Option ist für eine erfolgreiche Kommunikation mit dem Gerät erforderlich.
+- `--com <com>`: Gibt den COM-Port an, der für die Kommunikation verwendet werden soll. Der Parameter `<com>` sollte durch die spezifische COM-Port-Nummer ersetzt werden, z.B. `COM23`. Diese Option ist für eine erfolgreiche Kommunikation mit dem Gerät erforderlich.
 
-- `--xml <xml>`: Gibt den Pfad zu der XML-Datei an, die die hochzuladenden Daten enthält. Der Parameter "<xml>" sollte durch den Dateipfad ersetzt werden. Für ein erfolgreiches Hochladen ist es notwendig, eine gültige XML-Datei anzugeben.
+- `--xml <xml>` (für den `upload`-Befehl): Gibt den Pfad zur XML-Datei an, die die hochzuladenden Daten enthält. Der Parameter `<xml>` sollte durch den Dateipfad ersetzt werden. Es ist notwendig, eine gültige XML-Datei für einen erfolgreichen Upload bereitzustellen.
 
-- `--version`: Zeigt die Versionsinformationen für das Programm an.
+- `--xlsx <xlsx>` (für den `lintable`-Befehl): Gibt den Pfad zur XLSX-Datei an, die die hochzuladenden Daten enthält. Der Parameter `<xlsx>` sollte durch den Dateipfad ersetzt werden. Stellen Sie sicher, dass die XLSX-Datei ordnungsgemäß formatiert ist.
 
-- `-?, -h, --help`: Zeigt die Hilfe und Nutzungsinformationen für das Programm an.
+- `--version`: Zeigt die Versionsinformationen des Programms an.
+
+- `-?, -h, --help`: Zeigt die Hilfe- und Verwendungsinformationen für das Programm an.
+
+!!! note
+    Das Argument `--com` ist optional, wenn nur ein Gerät an den PC angeschlossen ist. Das Programm wird dann nach Ports suchen und den gefundenen verwenden. Wenn keine oder mehr als ein Gerät gefunden wird, tritt ein Fehler auf, und Sie müssen den COM-Port manuell angeben.
 
 ### Beispielverwendung
-Hier sind einige Beispiele für die Verwendung des VSE EasyLoader 6.0.5 Headless Mode Programms:
+Hier sind einige Beispiele, wie Sie den VSE EasyLoader 6.0.7 Headless Mode verwenden können:
 
-**Upload einer XML-Datei auf ein Gerät an COM23:**
+**Hochladen einer XML-Datei auf ein Gerät an COM23:**
 
-``` Batch
-"VSE EasyLoader Reloaded.exe" --com COM23 --xml "C:/pfad/zu/datei.xml"
+``` batch
+"VSE EasyLoader Reloaded.exe" upload --com COM23 --xml "C:/path/to/file.xml"
 ```
-Bitte vergewissern Sie sich, dass Sie über die erforderlichen Rechte für den Zugriff auf den angegebenen COM-Port verfügen und dass die XML-Datei korrekt formatiert ist, um einen erfolgreichen Upload zu gewährleisten.
 
-### Abfrage des Ergebnisses / Erfolgsstatus des Programms
+**Hochladen einer EasyCal-Kalibrierung auf COM23:**
 
-Bitte beachten Sie, dass bei Verwendung des VSE EasyLoader 6.0.5 Headless Mode die Ausgabe bzw. das Ergebnis standardmäßig nicht auf der Konsole angezeigt wird. Um die Ausgabe zu erfassen, wird empfohlen, den `>` Operator in der Kommandozeile zu verwenden, um die Ausgabe in eine Textdatei umzuleiten. Zum Beispiel:
+``` batch
+"VSE EasyLoader Reloaded.exe" lintable --com COM23 --xlsx "C:/path/to/file.xlsx"
+```
+
+### Abrufen des Ergebnisses / Erfolgsstatus des Programms
+
+Beim Verwenden des VSE EasyLoader 6.0.7 Headless Mode wird die Ausgabe oder das Ergebnis standardmäßig möglicherweise nicht auf der Konsole angezeigt. Um die Ausgabe zu erfassen, wird empfohlen, den `>` Operator in der Befehlszeile zu verwenden, um die Ausgabe in eine Textdatei umzuleiten. Zum Beispiel:
 
 ``` batch 
-"VSE EasyLoader Reloaded.exe" --com COM23 --xml "C:/pfad/zu/datei.xml" > output.txt
+"VSE EasyLoader Reloaded.exe" upload --com COM23 --xml "C:/path/to/file.xml" > output.txt
 ```
 
-Durch die Verwendung des Operators ">" und die Angabe eines Dateinamens (im obigen Beispiel "output.txt") können Sie die Ausgabe des Programms in einer Textdatei speichern, um sie später wieder zu verwenden. Wenn Sie die Ausgabe nicht umleiten, funktioniert das Programm weiterhin, aber es wird keine Ausgabe auf der Konsole angezeigt.
+Durch die Verwendung des `>` Operators und die Angabe eines Dateinamens (z.B. `output.txt`) können Sie die Programmausgabe in einer Textdatei speichern, um sie später nachzuschlagen. Ohne Umleitung der Ausgabe funktioniert das Programm weiterhin korrekt, aber es wird keine Ausgabe auf der Konsole angezeigt.
+
+### Batch-Dateien
+
+#### Automatisieren des Lintable-Uploads mit einer Batch-Datei
+
+Um den Upload-Prozess von EasyCal-Kalibrierungs-Tabellenkalkulationen zu vereinfachen, können Sie eine Batch-Datei erstellen, die automatisch die XLSX-Datei im aktuellen Verzeichnis findet und sie mit dem VSE EasyLoader hochlädt. Unten ist ein Beispiel für eine `.bat`-Datei:
+
+``` batch
+@echo off
+setlocal
+
+rem Definieren Sie den Pfad zur VSE EasyLoader-Programmdatei
+set "easyloader_path=%LOCALAPPDATA%\VSE EasyLoader\VSE EasyLoader Reloaded.exe"
+
+rem Überprüfen, ob die VSE EasyLoader-Programmdatei vorhanden ist
+if not exist "%easyloader_path%" (
+    echo VSE EasyLoader ist nicht installiert.
+    pause
+    exit /b
+)
+
+rem Suchen nach XLSX-Dateien im aktuellen Verzeichnis
+for %%f in (*.xlsx) do (
+    set "found_file=%%~ff"
+    goto :file_found
+)
+
+echo Keine XLSX-Datei im aktuellen Verzeichnis gefunden.
+pause
+exit /b
+
+:file_found
+echo Gefundene XLSX-Datei: %found_file%
+echo Hochladen mit VSE EasyLoader...
+"%easyloader_path%" lintable --xlsx "%found_file%" > nul 2>&1
+set "exit_code=%ERRORLEVEL%"
+
+if %exit_code%==0 (
+    echo Erfolg!
+) else (
+    echo EasyLoader beendete mit Code: %exit_code%
+)
+
+pause
+```
+
+Diese Batch-Datei überprüft das aktuelle Verzeichnis auf XLSX-Dateien. Wenn genau eine Datei gefunden wird, wird diese Datei mit dem VSE EasyLoader hochgeladen. Das Skript pausiert nach der Ausführung, sodass Sie das Ergebnis und die Ausgabe des Programms im Befehlsfenster anzeigen können.
 
 #### Beispiel für eine Batch-Datei zum Hochladen mehrerer Dateien auf mehrere Geräte
 

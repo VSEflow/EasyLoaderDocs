@@ -3,52 +3,114 @@
 ## :octicons-command-palette-16: Command Line Interface
 
 ### Description
-The VSE EasyLoader 6.0.5 Headless Mode is a command-line program designed to facilitate the uploading of XML files to a device via a serial port. This program eliminates the need for a graphical user interface, allowing for automated and batch processing of file uploads.
+The VSE EasyLoader 6.0.7 Headless Mode is a command-line program designed to facilitate the uploading of XML and XLSX files to a device via a serial port. This program eliminates the need for a graphical user interface, allowing for automated and batch processing of file uploads.
 
 ![](img/cmd1.png)
 
 ### Usage
-To use the VSE EasyLoader 6.0.5 Headless Mode, execute the program with the following command-line options:
+To use the VSE EasyLoader 6.0.7 Headless Mode, execute the program with the following command-line options:
 
 ``` batch
-"VSE EasyLoader Reloaded.exe" [options]
+"VSE EasyLoader Reloaded.exe" [command] [options]
 ```
 
+### Commands
+The program supports the following commands:
+
+- `upload`: Uploads an XML file to a device via the specified COM port.
+- `lintable`: Uploads an EasyCal calibration to a device via the specified COM port.
+
 ### Options
-The program supports the following command-line options:
+Each command supports the following options:
 
-- `--com <com>`: Specifies the COM port to use for communication. The `<com>` parameter should be replaced with the specific COM port number, such as COM23. This option is required for successful communication with the device.
+- `--com <com>`: Specifies the COM port to use for communication. The `<com>` parameter should be replaced with the specific COM port number, such as `COM23`. This option is required for successful communication with the device.
 
-- `--xml <xml>`: Specifies the path to the XML file containing the data to upload. The `<xml>` parameter should be replaced with the file path. It is necessary to provide a valid XML file for successful upload.
+- `--xml <xml>` (for `upload` command): Specifies the path to the XML file containing the data to upload. The `<xml>` parameter should be replaced with the file path. It is necessary to provide a valid XML file for a successful upload.
+
+- `--xlsx <xlsx>` (for `lintable` command): Specifies the path to the XLSX file containing the data to upload. The `<xlsx>` parameter should be replaced with the file path. Ensure the XLSX file is properly formatted.
 
 - `--version`: Displays the version information for the program.
 
 - `-?, -h, --help`: Shows the help and usage information for the program.
 
+!!! note
+    The `--com` argument is optional if only one device is connected to the PC. The program will then scan for ports and use the one it found. If there are none or more than one, it will error, and you will need to manually specify the COM port.
+
 ### Example Usage
-Here are a few examples of how to use the VSE EasyLoader 6.0.5 Headless Mode program:
+Here are examples of how to use the VSE EasyLoader 6.0.7 Headless Mode program:
 
 **Uploading an XML file to a device on COM23:**
 
 ``` batch
-"VSE EasyLoader Reloaded.exe" --com COM23 --xml "C:/path/to/file.xml"
+"VSE EasyLoader Reloaded.exe" upload --com COM23 --xml "C:/path/to/file.xml"
 ```
 
-Please ensure that you have the necessary privileges to access the specified COM port and that the XML file is correctly formatted to ensure a successful upload.
+**Uploading an EasyCal calibration to COM23:**
 
-### Obtaining the result / success status of the program
-
-Please note that when using the VSE EasyLoader 6.0.5 Headless Mode, the output or result may not be displayed on the console by default. To capture the output, it is recommended to use the `>` operator in the command line to redirect the output to a text file. For example:
-
-```batch 
-"VSE EasyLoader Reloaded.exe" --com COM23 --xml "C:/path/to/file.xml" > output.txt
+``` batch
+"VSE EasyLoader Reloaded.exe" lintable --com COM23 --xlsx "C:/path/to/file.xlsx"
 ```
 
-By using the `>` operator and specifying a file name (`output.txt` in the example above), you can save the program's output to a text file for later reference. Without redirecting the output, the program will still function properly, but no output will be shown on the console.
+### Obtaining the Result / Success Status of the Program
+
+When using the VSE EasyLoader 6.0.7 Headless Mode, the output or result may not be displayed on the console by default. To capture the output, it is recommended to use the `>` operator in the command line to redirect the output to a text file. For example:
+
+``` batch 
+"VSE EasyLoader Reloaded.exe" upload --com COM23 --xml "C:/path/to/file.xml" > output.txt
+```
+
+By using the `>` operator and specifying a file name (e.g., `output.txt`), you can save the program's output to a text file for later reference. Without redirecting the output, the program will still function properly, but no output will be shown on the console.
+
+### Batch processing
+
+#### Automating Lintable Upload with a Batch File
+
+To simplify the upload process of EasyCal calibration spreadsheets, you can create a batch file that automatically finds the XLSX file in the current directory and uploads it using the VSE EasyLoader. Below is an example `.bat` file:
+
+``` batch
+@echo off
+setlocal
+
+rem Define the path to the VSE EasyLoader executable
+set "easyloader_path=%LOCALAPPDATA%\VSE EasyLoader\VSE EasyLoader Reloaded.exe"
+
+rem Check if the VSE EasyLoader executable exists
+if not exist "%easyloader_path%" (
+    echo VSE EasyLoader is not installed.
+    pause
+    exit /b
+)
+
+rem Check for any .xlsx files in the current directory
+for %%f in (*.xlsx) do (
+    set "found_file=%%~ff"
+    goto :file_found
+)
+
+echo No XLSX file found in the current directory.
+pause
+exit /b
+
+:file_found
+echo Found XLSX file: %found_file%
+echo Uploading with VSE EasyLoader...
+"%easyloader_path%" lintable --xlsx "%found_file%" > nul 2>&1
+set "exit_code=%ERRORLEVEL%"
+
+if %exit_code%==0 (
+    echo Success!
+) else (
+    echo EasyLoader exited with code: %exit_code%
+)
+
+pause
+```
+
+This batch file checks the current directory for any `.xlsx` files. If exactly one file is found, it will proceed to upload that file using the VSE EasyLoader. The script pauses after execution, allowing you to view the program's result and output in the command shell.
 
 #### Example batch file for uploading multiple files to multiple devices
 
-This example batch file demonstrates how to automate the process of uploading multiple files to multiple devices using the VSE EasyLoader 6.0.5 Headless Mode. By leveraging the capabilities of a batch file, you can streamline and simplify the uploading process, saving time and effort.
+This example batch file demonstrates how to automate the process of uploading multiple files to multiple devices using the VSE EasyLoader 6.0.7 Headless Mode. By leveraging the capabilities of a batch file, you can streamline and simplify the uploading process, saving time and effort.
 
 To use this batch file, follow these steps:
 
@@ -57,7 +119,7 @@ To use this batch file, follow these steps:
 2. Paste the following code into the text editor:
 ``` batch
 @echo off
-echo VSE EasyLoader v6.0.5 Batch Upload (3x)
+echo VSE EasyLoader v6.0.7 Batch Upload (3x)
 echo:
 
 cd /D "%LOCALAPPDATA%\VSE EasyLoader"
